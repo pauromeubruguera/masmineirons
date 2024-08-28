@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "sofiapro-light";
+    src: url("../fonts/sofiapro/Sofia-Pro-Light-Az.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "sofiapro-bold";
+    src: url("../fonts/sofiapro/Sofia-Pro-Semi-Bold-Az.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "theseasons_italic";
+    src: url("../fonts/theseasons/Fontspring-DEMO-theseasons-bdit.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "theseasons_light";
+    src: url("../fonts/theseasons/Fontspring-DEMO-theseasons-lt.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "theseasons_bold";
+    src: url("../fonts/theseasons/Fontspring-DEMO-theseasons-bd.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "theseasons_bold";
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.9vw;
+}
+h3 {
+    margin: 8% 0 4%;
+    font-family: "theseasons_italic";
+}
+h4 {
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+}
+h5 {
+    font-size: 0.9vw;
+    margin-top: 32px;
+}
+h6 {
+    font-size: 0.95vw;
+    line-height: 1.7vw;
+}
+p {
+    font-size: 0.95vw;
+    margin-bottom: 1.3vw;
+    line-height: 1.25vw;
+    letter-spacing: 0.7px;
+    font-family: "sofiapro-light";
+    strong {
+        font-family: "sofiapro-bold";
+    }
+}
+form {
+    label,
+    input {
+        font-size: 0.95vw;
+        margin-bottom: 1.3vw;
+        line-height: 1.25vw;
+        letter-spacing: 0.7px;
+        font-family: "sofiapro-light";
+        strong {
+            font-family: "sofiapro-bold";
+        }
+    }
+    button {
+        font-family: "sofiapro-bold";
+        text-transform: uppercase;
+    }
+}
+ul {
+    margin-bottom: 1.3vw;
+    li {
+        font-size: 0.95vw;
+        line-height: 1.25vw;
+        letter-spacing: 0.7px;
+        font-family: "sofiapro-light";
+        strong {
+            font-family: "sofiapro-bold";
+        }
+    }
+}
+.minairo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+nav {
+    background-color: #848c81;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 68px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    button {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "theseasons_light";
+        font-size: 1.25vw;
+        line-height: 1.25vw;
+    }
+}
+section {
+    display: flex;
+    padding: 0 0 10%;
+    justify-content: space-evenly;
+    div {
+        position: relative;
+    }
+    .singleCol {
+        width: 100%;
+    }
+}
