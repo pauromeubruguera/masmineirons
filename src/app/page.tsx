@@ -25,7 +25,7 @@ export default function Home() {
             url='media\video_home.mp4'
             controls
             muted
-            playing='true'
+            playing={true}
             loop
             width="100%"
             height="auto"
