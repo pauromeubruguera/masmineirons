@@ -1,12 +1,12 @@
 "use client"
-import { MaxWidthWrapper } from "@/components/MaxWidthWrapper";
+import { MaxWidthWrapper } from "@/components/MaxWidthWrapper"
 import { Phone } from "@/components/Phone"
-import { Check, Star } from "lucide-react";
-import Image from "next/image";
-import React, { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
+import { Check, Star } from "lucide-react"
+import Image from "next/image"
+import React, { useEffect, useState } from 'react'
+import ReactPlayer from 'react-player'
 import './app.css'
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar"
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -129,8 +129,8 @@ export default function Home() {
 
             <img className="h-[90%] w-[90%] left-[5%] top-[10%] absolute z-[-1]" src="images/Taca_blava_1.png" alt="" />
             <p>
-              L'oli <strong>Mas Minairons</strong> és un producte de <strong>qualitat superior</strong> que es distingeix per diverses característiques úniques i acuradament seleccionades, començant pel fet
-              que prové d'oliveres centenàries.
+              L&apos;oli <strong>Mas Minairons</strong> és un producte de <strong>qualitat superior</strong> que es distingeix per diverses característiques úniques i acuradament seleccionades, començant pel fet
+              que prové d&apos;oliveres centenàries.
             </p>
             <p>
               Aquests arbres, cultivats durant generacions al mateix sòl fèrtil, han desenvolupat un sistema radicular profund i robust que els permet extreure nutrients de les
@@ -138,29 +138,29 @@ export default function Home() {
               poden aconseguir-se a través de dècades, si no segles, de cultiu.
             </p>
             <p>
-              La qualitat excepcional de l'oli <strong>Mas Minairons</strong> també és deguda als <strong>mètodes naturals i ecològics</strong> de cultiu que emprem. A les nostres finques, rebutgem l'ús
+              La qualitat excepcional de l&apos;oli <strong>Mas Minairons</strong> també és deguda als <strong>mètodes naturals i ecològics</strong> de cultiu que emprem. A les nostres finques, rebutgem l&apos;ús
               de pesticides i fertilitzants químics, optant per pràctiques agrícoles sostenibles que respecten el medi ambient i la biodiversitat local. Aquest enfocament no només protegeix
-              la salut del sòl i de les oliveres, sinó que també assegura que l'oli resultant estigui <strong>lliure de contaminants i químics indesitjats</strong>. Cada gota del nostre oli és un
+              la salut del sòl i de les oliveres, sinó que també assegura que l&apos;oli resultant estigui <strong>lliure de contaminants i químics indesitjats</strong>. Cada gota del nostre oli és un
               testimoni de la nostra dedicació a la puresa i la sostenibilitat, cosa que es reflecteix en el seu sabor i en la seva qualitat inigualable.
             </p>
             <p>
               A més, el nostre oli és un aliment <strong>ric en polifenols</strong>, compostos antioxidants que són altament beneficiosos per a la salut. Els polifenols ajuden a <strong>combatre el
                 estrès oxidatiu</strong> al cos, <strong>reduint el risc de malalties</strong> cardiovasculars i altres problemes de salut crònics.
-              En contrast, els olis provinents de cultius intensius se centren principalment en la quantitat més que no pas en la qualitat. Aquests mètodes de cultiu solen implicar-ne l'ús
-              d'arbres joves plantats en alta densitat, que són collits prematurament per maximitzar la producció. Els fertilitzants i pesticides químics s'utilitzen de
+              En contrast, els olis provinents de cultius intensius se centren principalment en la quantitat més que no pas en la qualitat. Aquests mètodes de cultiu solen implicar-ne l&apos;ús
+              d&apos;arbres joves plantats en alta densitat, que són collits prematurament per maximitzar la producció. Els fertilitzants i pesticides químics s&apos;utilitzen de
               manera rutinària per assegurar alts rendiments, però a costa del sabor i la salut de loli.
               A més, la recol·lecció mecànica i el processament a gran escala sovint resulten en olis amb sabors plans i menys complexos, mancant de les característiques
               distintives que fan que un oli sigui veritablement excepcional. La presència de polifenols també sol ser menor en aquests olis, cosa que redueix els seus beneficis
               per a la salut.
             </p>
             <p>
-              L'oli <strong>Mas Minairons</strong> és el resultat d'un procés meticulós que comença al camp i culmina al molí. La collita es realitza seleccionant només les olives
+              L&apos;oli <strong>Mas Minairons</strong> és el resultat d&apos;un procés meticulós que comença al camp i culmina al molí. La collita es realitza seleccionant només les olives
               al punt òptim de maduració, la qual cosa garanteix que cada oliva aporti el millor de si mateixa al producte final. El <strong>prensat en fred</strong>, realitzat poques hores després
-              de la collita, preserva els compostos volàtils, antioxidants i polifenols que són responsables del sabor i beneficis per a la salut de l'oli. Aquesta cura a cada
+              de la collita, preserva els compostos volàtils, antioxidants i polifenols que són responsables del sabor i beneficis per a la salut de l&apos;oli. Aquesta cura a cada
               etapa del procés no té comparació amb els mètodes industrials que prioritzen leficiència i el volum de producció.
             </p>
             <p>
-              En resum, l'oli <strong>Mas Minairons</strong> es distingeix pel seu origen en <strong>oliveres centenàries</strong> i la seva producció a través de mètodes ecològics i sostenibles. Aquests factors, juntament amb
+              En resum, l&apos;oli <strong>Mas Minairons</strong> es distingeix pel seu origen en <strong>oliveres centenàries</strong> i la seva producció a través de mètodes ecològics i sostenibles. Aquests factors, juntament amb
               una atenció meticulosa a cada detall del procés asseguren un producte de qualitat superior que ofereix una experiència sensorial i nutritiva única.
             </p>
           </div>
@@ -200,37 +200,37 @@ export default function Home() {
               <div className="text-[9px] leading-[11px];">(Bag in Box)</div>
             </div>
             <p>
-              Una de les innovacions en la conservació de l'oli d'oliva és el sistema “bag in box”
+              Una de les innovacions en la conservació de l&apos;oli d&apos;oliva és el sistema “bag in box”
               (BIB). Aquest mètode consisteix en una bossa flexible i hermètica continguda dins una caixa
               de cartró - En el nostre cas, de fusta-. La bossa està equipada amb una aixeta dispensadora
-              que permet extreure l'oli sense exposar-lo a l'aire ni a la llum, dos dels factors principals
+              que permet extreure l&apos;oli sense exposar-lo a l&apos;aire ni a la llum, dos dels factors principals
               que contribueixen a la seva oxidació i deteriorament.
             </p>
             <p>
-              Els beneficis del sistema bag in box per a la conservació de l'oli d'oliva són múltiples:
+              Els beneficis del sistema bag in box per a la conservació de l&apos;oli d&apos;oliva són múltiples:
             </p>
             <ul>
               <li>
-                <strong>1. Protecció contra l'oxidació:</strong> En evitar el contacte de l'oli amb l'aire, es redueix
-                significativament el risc d'oxidació, mantenint el sabor i les propietats nutritives
+                <strong>1. Protecció contra l&apos;oxidació:</strong> En evitar el contacte de l&apos;oli amb l&apos;aire, es redueix
+                significativament el risc d&apos;oxidació, mantenint el sabor i les propietats nutritives
                 oli durant més temps.
               </li>
               <li>
-                <strong>2. Protecció contra l'oxidació:</strong> En evitar el contacte de l'oli amb l'aire, es redueix
-                significativament el risc d'oxidació, mantenint el sabor i les propietats nutritives
+                <strong>2. Protecció contra l&apos;oxidació:</strong> En evitar el contacte de l&apos;oli amb l&apos;aire, es redueix
+                significativament el risc d&apos;oxidació, mantenint el sabor i les propietats nutritives
                 oli durant més temps.
               </li>
               <li>
-                <strong>3. Facilitat d'ús:</strong> L'aixeta dispensadora permet una dosificació precisa i còmoda, sense
-                necessitat d'obrir i tancar constantment l'envàs.
+                <strong>3. Facilitat d&apos;ús:</strong> L&apos;aixeta dispensadora permet una dosificació precisa i còmoda, sense
+                necessitat d&apos;obrir i tancar constantment l&apos;envàs.
               </li>
               <li>
-                <strong>4. Sostenibilitat:</strong> El “bag in box” és una opció més ecològica, ja que redueix l'ús de
+                <strong>4. Sostenibilitat:</strong> El “bag in box” és una opció més ecològica, ja que redueix l&apos;ús de
                 plàstics i facilita el reciclatge del cartró.
               </li>
             </ul>
             <p>
-              En resum, el sistema “bag in box” no només ajuda a prolongar la vida útil de l'oli de
+              En resum, el sistema “bag in box” no només ajuda a prolongar la vida útil de l&apos;oli de
               oliva, sinó que també contribueix a mantenir la seva qualitat i sabor, oferint una solució
               pràctica i sostenible per al seu emmagatzematge.
             </p>
@@ -267,7 +267,7 @@ export default function Home() {
               <strong>La nostra Història</strong>
             </p>
             <p>
-              Mas Minairons va néixer de la passió de la nostra família per l'agricultura ecològica, els productes de
+              Mas Minairons va néixer de la passió de la nostra família per l&apos;agricultura ecològica, els productes de
               qualitat i amor per la nostra terra. Hem cultivat oliveres al cor de Catalunya, seguint
               pràctiques respectuoses amb el medi ambient i mantenint viva la tradició oliverera de la nostra
               regió.
@@ -277,7 +277,7 @@ export default function Home() {
             </p>
             <p>
               Produïm oli d´oliva verge extra ecològic, amb l´objectiu d´oferir un producte pur, saludable
-              i ple de sabor. El nostre oli s'elabora exclusivament amb olives cultivades als nostres propis
+              i ple de sabor. El nostre oli s&apos;elabora exclusivament amb olives cultivades als nostres propis
               camps, collides en el moment òptim de maduració i premsades en fred per conservar-les totes
               propietats i aromes.
             </p>
@@ -292,7 +292,7 @@ export default function Home() {
               A Mas Minairons, creiem en una agricultura sostenible que respecta el cicle natural de la terra. Utilitzem
               tècniques tradicionals combinades amb innovacions ecològiques per assegurar que les nostres oliveres creixin
               sans i forts, sense la necessitat de pesticides ni productes químics. Cada gota del nostre oli és el
-              resultat d'un treball acurat i dedicat, que comença al camp i acaba a taula.
+              resultat d&apos;un treball acurat i dedicat, que comença al camp i acaba a taula.
             </p>
             <p className="mt-5">
               <strong>El nostre Compromís</strong>
