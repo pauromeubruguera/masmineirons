@@ -62,7 +62,12 @@ export default function Home() {
               més especial.</p>
           </div>
           <div className="w-6/12">
-            <img className="pt-[16%] pr-[14%] pl-[13%]" src="minairons/Minairons_conills_1.jpg" alt="" />
+            <Image
+              width={3504}
+              height={3272}
+              className="pt-[16%] pr-[14%] pl-[13%]"
+              src="/minairons/Minairons_conills_1.jpg"
+              alt="" />
           </div>
         </section>
         <section>
@@ -85,8 +90,19 @@ export default function Home() {
             </p>
           </div>
           <div className="w-6/12">
-            <img className="pt-[6%] pr-[52%] pl-[0%]" src="images/botella_oli.jpg" alt="" />
-            <img className="pb-[0%] pr-[0%] pl-[44%] bottom-0 minairo" src="minairons/Minairo_2_SOLIVENC.png" alt="" />
+            <div className="pt-[6%] pr-[52%] pl-[0%]">
+              <Image
+                width={385}
+                height={683}
+                src="/images/botella_oli.jpg"
+                alt="" />
+            </div>
+            <Image
+              width={3508}
+              height={4961}
+              className="pb-[0%] pr-[0%] pl-[44%] bottom-0 minairo"
+              src="/minairons/Minairo_2_SOLIVENC.png"
+              alt="" />
           </div>
         </section>
         <section>
@@ -103,13 +119,29 @@ export default function Home() {
             </p>
           </div>
           <div className="w-6/12">
-            <img className="pt-[7.5%] pr-[52%] pl-[0%]" src="images/botella_oli.jpg" alt="" />
-            <img className="pb-[0%] pr-[49%] pl-[0%] left-[-33%] bottom-[-2%] minairo" src="minairons/Minairo_4_MORRIS.png" alt="" />
+            <div className="pt-[7.5%] pr-[52%] pl-[0%]">
+              <Image
+                width={385}
+                height={683}
+                src="/images/botella_oli.jpg"
+                alt="" />
+            </div>
+            <Image
+              width={3508}
+              height={4961}
+              className="pb-[0%] pr-[49%] pl-[0%] left-[-33%] bottom-[-2%] minairo"
+              src="/minairons/Minairo_4_MORRIS.png"
+              alt="" />
           </div>
         </section>
         <section>
           <div className="pt-[16%] pr-[0.5%] pl-[22%] w-6/12">
-            <img className="pt-[14%] pr-[37%] pl-[0%] left-[-3%] top-0 minairo" src="minairons/Minairo_3.png" alt="" />
+            <Image
+              width={3508}
+              height={4961}
+              className="pt-[14%] pr-[37%] pl-[0%] left-[-3%] top-0 minairo"
+              src="/minairons/Minairo_3.png"
+              alt="" />
             <h3>Farga</h3>
             <p>
               Creada pel minairó Fargot.
@@ -122,13 +154,24 @@ export default function Home() {
             </p>
           </div>
           <div className="w-6/12">
-            <img className="pt-[7.5%] pr-[52%] pl-[0%]" src="images/botella_oli.jpg" alt="" />
+            <div className="pt-[7.5%] pr-[52%] pl-[0%]">
+              <Image
+                width={385}
+                height={683}
+                src="/images/botella_oli.jpg"
+                alt="" />
+            </div>
           </div>
         </section>
         <section>
           <div className="pt-[7%] pr-[6%] pl-[11%] singleCol">
 
-            <img className="h-[90%] w-[90%] left-[5%] top-[10%] absolute z-[-1]" src="images/Taca_blava_1.png" alt="" />
+            <Image
+              width={4961}
+              height={3508}
+              className="h-[90%] w-[90%] left-[5%] top-[10%] absolute z-[-1]"
+              src="/images/Taca_blava_1.png"
+              alt="" />
             <p>
               L&apos;oli <strong>Mas Minairons</strong> és un producte de <strong>qualitat superior</strong> que es distingeix per diverses característiques úniques i acuradament seleccionades, començant pel fet
               que prové d&apos;oliveres centenàries.
@@ -170,26 +213,43 @@ export default function Home() {
         <section>
           <div className="w-1/3">
             <div className="w-fit text-center pt-[10%] pr-[7%] pl-[44%]" >
-              <img src="images/botella_oli.jpg" alt="" />
+              <Image
+                width={385}
+                height={683}
+                src="/images/botella_oli.jpg"
+                alt="" />
               <h5>Minairo - Fargot</h5>
             </div>
           </div>
           <div className="w-1/3">
             <div className="w-fit text-center pt-[10%] pr-[26%] pl-[26%]">
-              <img src="images/botella_oli.jpg" alt="" />
+              <Image
+                width={385}
+                height={683}
+                src="/images/botella_oli.jpg"
+                alt="" />
               <h5>Minairo - Solivenc</h5>
             </div>
           </div>
           <div className="w-1/3">
             <div className="w-fit text-center pt-[10%] pr-[44%] pl-[7%]">
-              <img src="images/botella_oli.jpg" alt="" />
+              <Image
+                width={385}
+                height={683}
+                src="/images/botella_oli.jpg"
+                alt="" />
               <h5>Minairo - Morris</h5>
             </div>
           </div>
         </section>
         <section>
           <div className="w-5/12">
-            <img className="pt-[8%] pr-[1%] pl-[30%]" src="images/bag_in_box.jpg" alt="" />
+            <Image
+              width={3508}
+              height={4961}
+              className="pt-[8%] pr-[1%] pl-[30%]"
+              src="/images/bag_in_box.jpg"
+              alt="" />
           </div>
           <div className="pt-[6%] pr-[7%] pl-[7%] w-7/12">
             <div className="text-center pb-[5%]">
@@ -251,7 +311,12 @@ export default function Home() {
         </section>
         <section>
           <div className="w-5/12">
-            <img className="pt-[4%] pr-[0%] pl-[30%]" src="minairons/Minairo_1-pajaro_v2.png" alt="" />
+            <Image
+              width={3508}
+              height={4961}
+              className="pt-[4%] pr-[0%] pl-[30%]"
+              src="/minairons/Minairo_1-pajaro_v2.png"
+              alt="" />
           </div>
           <div className="pt-[7.5%] pr-[6%] pl-[4%] w-7/12">
             <h2>Nosaltres</h2>
@@ -314,7 +379,12 @@ export default function Home() {
             </p>
           </div>
           <div className="w-5/12">
-            <img className="pt-[0%] pr-[30%] pl-[0%]" src="minairons/Minairo_1-pajaro_v2.png" alt="" />
+            <Image
+              width={3508}
+              height={4961}
+              className="pt-[0%] pr-[30%] pl-[0%]"
+              src="/minairons/Minairo_1-pajaro_v2.png"
+              alt="" />
           </div>
         </section>
         <section>
@@ -331,7 +401,12 @@ export default function Home() {
         </section>
         <section>
           <div className="w-4/12">
-            <img className="pt-[0%] pr-[2%] pl-[34%]" src="minairons/Minairo_5_got.png" alt="" />
+            <Image
+              width={3508}
+              height={4961}
+              className="pt-[0%] pr-[2%] pl-[34%]"
+              src="/minairons/Minairo_5_got.png"
+              alt="" />
           </div>
           <div className="w-8/12 pt-[0%] pr-[18%] pl-[2%]">
             <h2>TITOL DE L&apos;ENTRADA</h2>
@@ -349,7 +424,10 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <img src="images/panoramica.jpg" alt="" />
+            <Image
+              width={3504}
+              height={3272}
+              src="/images/panoramica.jpg" alt="" />
           </div>
         </section>
         <section>
@@ -375,12 +453,21 @@ export default function Home() {
             </form>
           </div>
           <div className="w-8/12">
-            <img className="pt-[0%] pr-[9%] pl-[4%]" src="images/Olivera.png" alt="" />
+            <Image
+              width={4961}
+              height={3508}
+              className="pt-[0%] pr-[9%] pl-[4%]"
+              src="/images/Olivera.png"
+              alt="" />
           </div>
         </section>
         <section>
           <div>
-            <img src="marca/logo.png" alt="" />
+            <Image
+              width={204}
+              height={187}
+              src="/marca/logo.png" 
+              alt="" />
           </div>
         </section>
       </div>
