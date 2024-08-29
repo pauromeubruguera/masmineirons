@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import './app.css'
 import { Navbar } from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -383,6 +384,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 }
