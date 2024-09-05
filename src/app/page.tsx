@@ -3,8 +3,6 @@ import Image from "next/image"
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import './app.css'
-import { Navbar } from "@/components/Navbar"
-import { Footer } from "@/components/Footer"
 import { FeaturedProducts } from "@/components/FeaturedProducts"
 
 export default function Home() {
