@@ -1,13 +1,11 @@
 "use client"
-import { MaxWidthWrapper } from "@/components/MaxWidthWrapper"
-import { Phone } from "@/components/Phone"
-import { Check, Star } from "lucide-react"
 import Image from "next/image"
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import './app.css'
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
+import { FeaturedProducts } from "@/components/FeaturedProducts"
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -18,8 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      <div className="pt-[68px]">
+      <div>
         <section>
           {isClient && (
             <ReactPlayer
@@ -65,8 +62,8 @@ export default function Home() {
             <Image
               width={3504}
               height={3272}
-              className="pt-[16%] pr-[14%] pl-[13%]"
-              src="/minairons/Minairons_conills_1.jpg"
+              className="mt-[-20%] pr-[14%] pl-[13%]"
+              src="/minairons/Minairons_conills_1.png"
               alt="" />
           </div>
         </section>
@@ -92,8 +89,8 @@ export default function Home() {
           <div className="w-6/12">
             <div className="pt-[6%] pr-[52%] pl-[0%]">
               <Image
-                width={385}
-                height={683}
+                width={456}
+                height={814}
                 src="/images/botella_oli.jpg"
                 alt="" />
             </div>
@@ -121,8 +118,8 @@ export default function Home() {
           <div className="w-6/12">
             <div className="pt-[7.5%] pr-[52%] pl-[0%]">
               <Image
-                width={385}
-                height={683}
+                width={456}
+                height={814}
                 src="/images/botella_oli.jpg"
                 alt="" />
             </div>
@@ -156,8 +153,8 @@ export default function Home() {
           <div className="w-6/12">
             <div className="pt-[7.5%] pr-[52%] pl-[0%]">
               <Image
-                width={385}
-                height={683}
+                width={456}
+                height={814}
                 src="/images/botella_oli.jpg"
                 alt="" />
             </div>
@@ -209,39 +206,7 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <h2 className="pt-[8.7%] pr-[0%] pl-[11%]">Productes</h2>
-        <section>
-          <div className="w-1/3">
-            <div className="w-fit text-center pt-[10%] pr-[7%] pl-[44%]" >
-              <Image
-                width={385}
-                height={683}
-                src="/images/botella_oli.jpg"
-                alt="" />
-              <h5>Minairo - Fargot</h5>
-            </div>
-          </div>
-          <div className="w-1/3">
-            <div className="w-fit text-center pt-[10%] pr-[26%] pl-[26%]">
-              <Image
-                width={385}
-                height={683}
-                src="/images/botella_oli.jpg"
-                alt="" />
-              <h5>Minairo - Solivenc</h5>
-            </div>
-          </div>
-          <div className="w-1/3">
-            <div className="w-fit text-center pt-[10%] pr-[44%] pl-[7%]">
-              <Image
-                width={385}
-                height={683}
-                src="/images/botella_oli.jpg"
-                alt="" />
-              <h5>Minairo - Morris</h5>
-            </div>
-          </div>
-        </section>
+        <FeaturedProducts />
         <section>
           <div className="w-5/12">
             <Image
@@ -471,7 +436,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }
