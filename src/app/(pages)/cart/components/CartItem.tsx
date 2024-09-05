@@ -17,7 +17,7 @@ export default function CartItem(props: CartItemProps) {
         <li className="flex p-6 border-b">
             <Link href={`/product/${product.attributes.slug}`}>
                 <img
-                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.attributes.images.data[0].attributes.url}`}
+                    src={`${product.attributes.images.data[0].attributes.url}`}
                     alt='product'
                     className="w-24 h-24 overflow-hidden rounded-md" />
             </Link>

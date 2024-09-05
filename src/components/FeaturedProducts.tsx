@@ -21,7 +21,7 @@ export const FeaturedProducts = () => {
                                     <Image
                                         width={456}
                                         height={814}
-                                        src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${attributes.images.data[0].attributes.url}`}
+                                        src={`${attributes.images.data[0].attributes.url}`}
                                         alt="" />
                                     <h5>Minairo - {attributes.minairo}</h5>
                                 </div>

@@ -33,7 +33,7 @@ export const ImagesProduct = (props: ImageProductProps) => {
                 {images.data.map((image) => (
                     <SwiperSlide key={image.id}>
                         <Image
-                        src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.attributes.url}`}
+                        src={`${image.attributes.url}`}
                         width={image.attributes.width}
                         height={image.attributes.height}
                          alt="img" />

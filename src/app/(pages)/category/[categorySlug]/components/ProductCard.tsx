@@ -30,7 +30,7 @@ export const ProductCard = (props: ProductCardProps) => {
                 >
                     {product.attributes.images.data.map((image) => (
                         <SwiperSlide key={image.id}>
-                            <img src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.attributes.url}`} alt="img" />
+                            <img src={`${image.attributes.url}`} alt="img" />
                         </SwiperSlide>
                     ))}
                 </Swiper>
