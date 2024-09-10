@@ -15,24 +15,18 @@ export const FilterOrigin = (props: FilterOriginProps) => {
     }
 
     return (
-        <div>
-            <p>Origen</p>
+        <div className="flex items-center">
+            <p>Origen: </p>
             {loading && result === null && (
                 <p>cargando origen</p>
             )}
-            <form onChange={handleChange}>
-                <fieldset>
-                    <div>
-                        <input type="radio" id="all" name="origin" value='' />
-                        <label htmlFor="all">all</label>
-                    </div>
+            <form onChange={handleChange} className="">
+                <select name="" id="">
+                    <option value="">Todos</option>
                     {result !== null && result.schema.attributes.origin.enum.map((origin: string) => (
-                        <div key={origin}>
-                            <input type="radio" id={origin} name="origin" value={origin} />
-                            <label htmlFor={origin}>{origin}</label>
-                        </div>
+                        <option key={origin} value={origin}>{origin}</option>
                     ))}
-                </fieldset>
+                </select>
             </form>
 
         </div>

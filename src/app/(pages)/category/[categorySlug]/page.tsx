@@ -27,7 +27,7 @@ export default function Category() {
             {result !== null && !loading && (
                 <h1>{result[0].attributes.category.data.attributes.categoryName}</h1>
             )}
-            <div className="flex justify-evenly">
+            <div className="">
                 <FiltersCategory setFilterOrigin={setFilterOrigin} />
                 <div className="flex gap-5 w-full">
                     {loading && (

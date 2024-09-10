@@ -6,13 +6,13 @@ nav {
     background-color: #848c81;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 68px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 99;
-    button {
+    .navLink {
         color: #000;
         text-transform: uppercase;
         font-family: "theseasons_light";

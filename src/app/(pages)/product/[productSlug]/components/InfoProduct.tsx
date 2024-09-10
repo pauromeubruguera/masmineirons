@@ -2,6 +2,7 @@ import { useCart } from "@/hooks/use-cart"
 import { formatPrice } from "@/lib/formatPrice"
 import { ProductType } from "@/types/products"
 import { Heart } from 'lucide-react'
+
 export type InfoProductProps = {
     product: ProductType
 }

@@ -14,6 +14,8 @@ export type ProductType = {
                 id: number
                 attributes: {
                     url: string
+                    width: number
+                    height: number
                 }
             }[]
         }
