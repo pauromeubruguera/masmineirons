@@ -1,9 +1,9 @@
 body {
     margin-top: 68px;
+    background-color: #e5ded4;
 }
 
 nav {
-    background-color: #848c81;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -12,11 +12,19 @@ nav {
     top: 0;
     width: 100%;
     z-index: 99;
+    .logo {
+        font-family: "theseasons_bold";
+        color: #000;
+        text-transform: uppercase;
+        font-size: 1.55vw;
+        line-height: 1.25vw;
+        letter-spacing: 1.5px;
+    }
     .navLink {
         color: #000;
         text-transform: uppercase;
-        font-family: "theseasons_light";
-        font-size: 1.25vw;
+        font-family: "sofiapro-regular";
+        font-size: 1.1vw;
         line-height: 1.25vw;
         letter-spacing: 1.5px;
     }

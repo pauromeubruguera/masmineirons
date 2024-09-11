@@ -1,16 +1,28 @@
 "use client"
 import { useCart } from '@/hooks/use-cart'
-import { ShoppingCart, Heart, User, Globe } from 'lucide-react'
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { ShoppingCart, Heart, User, Globe, ChevronDown } from 'lucide-react'
+import { Link } from '@/i18n/routing';
+import { useState, useEffect, ChangeEvent, useTransition } from 'react'
 import { LoginModal } from './LoginModal'
 import { useAuthStore } from '@/hooks/auth-store'
+import { useLocale, useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 export const Navbar = () => {
     const [showLogin, setShowLogin] = useState(false)
     const { isAuthenticated, user, logout } = useAuthStore()
     const [isClient, setIsClient] = useState(false)
     const cart = useCart()
+    const [isPending, startTransition] = useTransition()
+    const t = useTranslations('Navbar')
+    const router = useRouter()
+    const localActive = useLocale()
+
+    const onLanguageChange = (nextLocale: string) => {
+        const currentPath = window.location.pathname;
+        const newPath = currentPath.replace(/^\/[a-z]{2}\//, `/${nextLocale}/`); 
+        router.push(newPath)
+    }
 
     useEffect(() => {
         // Solo se ejecuta en el cliente
@@ -23,9 +35,10 @@ export const Navbar = () => {
     }
 
     return (
-        <nav>
-            <Link href="/" className='navLink'>Inici</Link>
-            <Link href="/category/botella-1-l" className='navLink'>productes</Link>
+        <nav className='bg-[#787c6e]'>
+            <Link href="/" className='logo'>Mas Mineirons</Link>
+            <Link href="/" className='navLink'>{t('home')}</Link>
+            <Link href="/category/botella-1-l" className='navLink'>{t('products')}</Link>
             <button className='navLink'>blog</button>
             <button className='navLink'>nosaltres</button>
             <button className='navLink'>contacte</button>
@@ -50,14 +63,11 @@ export const Navbar = () => {
                 {isAuthenticated ?
                     <div className="group relative cursor-pointer">
                         <div className="flex items-center justify-between">
-                            <div className="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4" onClick="">
+                            <div className="menu-hover my-2 py-2 text-base font-medium text-black">
                                 <User strokeWidth="1" className="cursor-pointer" />
                             </div>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" className="h-6 w-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
+                                <ChevronDown strokeWidth="1" className="cursor-pointer" />
                             </span>
                         </div>
 
@@ -86,15 +96,53 @@ export const Navbar = () => {
                     :
                     <button onClick={() => setShowLogin(true)}>Login/Signin</button>
                 }
-                <div className='flex items-center'>
-                    <Globe strokeWidth="1" width={20} className="cursor-pointer" />
-                    <select className='text-black p-1 rounded bg-transparent' id="sort" value="ca">
-                        <option value="ca">CA</option>
-                        <option value="es">ES</option>
-                        <option value="en">EN</option>
-                        <option value="jp">JP</option>
-                        <option value="al">AL</option>
-                    </select>
+                <div className="group relative cursor-pointer">
+                    <div className="flex gap-1 items-center justify-between">
+                        <div className="menu-hover my-2 py-2 text-base font-medium text-black">
+                            <Globe strokeWidth="1" width={20} className="cursor-pointer" />
+                        </div>
+                        <div className='uppercase'>
+                            {localActive}
+                        </div>
+                        <div>
+                            <ChevronDown strokeWidth="1" className="cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div
+                        className="invisible text-right absolute right-0 z-50 flex w-min flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible transition-opacity">
+                        <button
+                            className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+                            onClick={() => onLanguageChange("ca")}
+                        >
+                            CA
+                        </button>
+                        <button
+                            className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+                            onClick={() => onLanguageChange("es")}
+                        >
+                            ES
+                        </button>
+                        <button
+                            className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+                            onClick={() => onLanguageChange("en")}
+                        >
+                            EN
+                        </button>
+                        <button
+                            className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+                            onClick={() => onLanguageChange("jp")}
+                        >
+                            JP
+                        </button>
+                        <button
+                            className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+                            onClick={() => onLanguageChange("de")}
+                        >
+                            DE
+                        </button>
+
+                    </div>
                 </div>
             </div>
             {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}

@@ -28,13 +28,6 @@ export const Footer = () => {
             <div>
                 <p className="text-sm"><strong>Opcions d&apos;accessibilitat</strong></p>
             </div>
-            <div className="flex flex-col gap-1">
-                <button><img className="w-10 h-5" src="/images/ca.png" alt="" /></button>
-                <button><img className="w-10 h-5" src="/images/es.jpg" alt="" /></button>
-                <button><img className="w-10 h-5" src="/images/gb.png" alt="" /></button>
-                <button><img className="w-10 h-5" src="/images/al.png" alt="" /></button>
-                <button><img className="w-10 h-5" src="/images/jp.png" alt="" /></button>
-            </div>
         </footer>
     )
 }
