@@ -74,18 +74,18 @@ export const LoginModal = (props: LoginModalProps) => {
 
     return (
         <div onClick={closeModal} className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
-            <div className="mt-10 flex flex-col gap-0 text-white bg-green-900 rounded-xl px-5 py-5">
+            <div className="mt-10 flex flex-col gap-0 text-black bg-[#787c6e] rounded-xl px-5 py-5">
                 <button onClick={onClose} className="place-self-end"><X size={30} /></button>
                 <div className="flex flex-col gap-5 items-center mx-4">
                     {showSignin ?
                         <div>
                             <h2>SignIn</h2>
-                            <p>Ya estas registrado. <button onClick={() => { setShowSignin(!showSignin) }}>Entra Aqui</button></p>
+                            <p>Ya estas registrado? <button  className="underline text-blue-400" onClick={() => { setShowSignin(!showSignin) }}>Entra Aqui</button></p>
                         </div>
                         :
                         <div>
                             <h2>Login</h2>
-                            <p>No estas registrado? <button onClick={() => { setShowSignin(!showSignin) }}>Registrate aqui</button></p>
+                            <p>No estas registrado? <button className="underline text-blue-400" onClick={() => { setShowSignin(!showSignin) }}>Registrate aqui</button></p>
                         </div>
                     }
                     <div>

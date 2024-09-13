@@ -43,7 +43,6 @@
 h1,
 h2,
 h4,
-h5,
 h6 {
     font-family: "theseasons_bold";
     text-transform: uppercase;
@@ -61,8 +60,10 @@ h4 {
     line-height: 1.3vw;
 }
 h5 {
-    font-size: 0.9vw;
+    font-family: "sofiapro-light";
+    font-size: 1.3vw;
     margin-top: 32px;
+    text-transform: uppercase;
 }
 h6 {
     font-size: 0.95vw;

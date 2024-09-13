@@ -15,16 +15,16 @@ export default function Product() {
     const [isClient, setIsClient] = useState(false)
 
     return (
-        <div className="p-10">
+        <div className="">
             {result === null && loading && (
                 <p>loading</p>
             )}
             {result !== null && !loading && (
-                <div className="flex gap-5 justify-evenly">
-                    <div className="w-1/6">
+                <div className="flex gap-5 justify-evenly mt-[-68px] min-h-screen items-center">
+                    <div className="w-3/12">
                         <ImagesProduct images={result[0].attributes.images} />
                     </div>
-                    <div>
+                    <div className="w-5/12">
                         <InfoProduct product={result[0]} />
                     </div>
                 </div>

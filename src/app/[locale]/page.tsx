@@ -70,7 +70,7 @@ export default function Home() {
                         <Image
                             width={3508}
                             height={4961}
-                            className="pt-[0%] pr-[42%] pl-[0%] left-[0%] bottom-0 minairo"
+                            className="pt-[0%] pr-[27%] pl-[0%] mb-[-3%] left-[-5%] bottom-0 minairo"
                             src="/minairons/Minairo_2_SOLIVENC.png"
                             alt="" />
                         <p>
@@ -106,7 +106,7 @@ export default function Home() {
                         <Image
                             width={3508}
                             height={4961}
-                            className="pt-[0%] pr-[52%] pl-[0%] left-[0%] bottom-0 minairo"
+                            className="pt-[0%] pr-[38%] pl-[0%] left-[-8%] bottom-0 minairo"
                             src="/minairons/Minairo_4_MORRIS.png"
                             alt="" />
                         <h3>Morruda</h3>
@@ -117,6 +117,8 @@ export default function Home() {
                             D’entrada és picant, alhora que amarg
                             i astringent, però la sensació és fresca gràcies
                             a les seves notes vegetals.
+                        </p>
+                        <p>
                             Un oli potent i agradable a la vegada.
                         </p>
                     </div>
@@ -136,7 +138,7 @@ export default function Home() {
                         <Image
                             width={3508}
                             height={4961}
-                            className="pt-[2%] pr-[49%] pl-[0%] mb-[-12%] left-0 bottom-0 minairo"
+                            className="pt-[4%] pr-[32%] pl-[0%] mb-[-12%] left-[-7%] bottom-0 minairo"
                             src="/minairons/Minairo_3.png"
                             alt="" />
                         <h3>Farga</h3>
@@ -420,7 +422,7 @@ export default function Home() {
                             alt="" />
                     </div>
                 </section>
-                <section>
+                <section className="py-36">
                     <div>
                         <Image
                             width={204}

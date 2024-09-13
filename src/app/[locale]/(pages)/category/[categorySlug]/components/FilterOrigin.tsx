@@ -15,7 +15,7 @@ export const FilterOrigin = (props: FilterOriginProps) => {
     }
 
     return (
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
             <p>Origen: </p>
             {loading && result === null && (
                 <p>cargando origen</p>

@@ -20,16 +20,17 @@ export default function Category() {
             : result.filter((product: ProductType) =>
                 product.attributes.origin === filterOrigin)
     )
+    console.log(result)
     
 
     return (
         <div className="p-10">
-            {result !== null && !loading && (
-                <h1>{result[0].attributes.category.data.attributes.categoryName}</h1>
+            {result !== null && filteredProducts.length !== 0 && !loading && (
+                <h1 className="text-4xl">{result[0].attributes.category.data.attributes.categoryName}</h1>
             )}
-            <div className="">
+            <div className="mt-10">
                 <FiltersCategory setFilterOrigin={setFilterOrigin} />
-                <div className="flex gap-5 w-full">
+                <div className="flex gap-5 w-full justify-around py-5">
                     {loading && (
                        <p>loading</p>
                     )}
