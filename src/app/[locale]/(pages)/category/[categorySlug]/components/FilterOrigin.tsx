@@ -1,4 +1,4 @@
-import { useGetProductField } from "@/api/getProductField"
+import { useGetProductField } from "@/app/api/getProductField"
 import { FilterTypes } from "@/types/filter"
 
 type FilterOriginProps = {

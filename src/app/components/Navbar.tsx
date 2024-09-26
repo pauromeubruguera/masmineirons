@@ -7,9 +7,11 @@ import { LoginModal } from './LoginModal'
 import { useAuthStore } from '@/hooks/auth-store'
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import { useGetCategories } from '@/api/useGetCategories';
+import { useGetCategories } from '@/app/api/useGetCategories';
 import { ResponseType } from "@/types/response"
 import { CategoryType } from '@/types/category';
+import "@/styles/navbar.css"
+
 
 export const Navbar = () => {
     const [showLogin, setShowLogin] = useState(false)
@@ -40,7 +42,7 @@ export const Navbar = () => {
     return (
         <nav className='bg-[#787c6e]'>
             <Link href="/" className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
-                <span className='logo hover:text-white'>Mas Mineirons</span>
+                <span className='logo hover:text-white'>Mas Minairons</span>
             </Link>
             <Link href="/" className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>{t('home')}</span>
@@ -110,10 +112,10 @@ export const Navbar = () => {
                                 Dashboard
                             </Link>
                             <Link
-                                href="/settings"
+                                href="/yourorders"
                                 className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap"
                             >
-                                Settings
+                                Your orders
                             </Link>
                             <button
                                 className="py-3 block text-right border-t border-red-300 font-semibold text-red-500 hover:text-white hover:bg-red-500 px-4 text-nowrap"

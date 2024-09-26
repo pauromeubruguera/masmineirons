@@ -10,15 +10,17 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
-    user: null,
+    user: Cookies.get('user') || null,
     token: Cookies.get('jwt') || null, 
     isAuthenticated: !!Cookies.get('jwt'), 
     login: (token, user) => {
         Cookies.set('jwt', token, { expires: 7 }) 
+        Cookies.set('user', JSON.stringify(user), { expires: 7 }) 
         set({ user, token, isAuthenticated: true }) 
     },
     logout: () => {
         Cookies.remove('jwt')  
+        Cookies.remove('user')  
         set({ user: null, token: null, isAuthenticated: false }) 
     },
 }))

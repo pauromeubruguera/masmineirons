@@ -1,5 +1,5 @@
 "use client"
-import { useGetCategoryProduct } from "@/api/useGetCategoryProduct"
+import { useGetCategoryProduct } from "@/app/api/useGetCategoryProduct"
 import { ResponseType } from "@/types/response"
 import { useParams } from "next/navigation"
 import { FiltersCategory } from "./components/FiltersCategory"
@@ -20,7 +20,6 @@ export default function Category() {
             : result.filter((product: ProductType) =>
                 product.attributes.origin === filterOrigin)
     )
-    console.log(result)
     
 
     return (

@@ -1,4 +1,4 @@
-import { useGetFeaturedProducts } from "@/api/useGetFeaturedProducts"
+import { useGetFeaturedProducts } from "@/app/api/useGetFeaturedProducts"
 import { ProductType } from "@/types/products"
 import { ResponseType } from "@/types/response"
 import Image from "next/image"

@@ -3,7 +3,7 @@ import Image from "next/image"
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import './app.css'
-import { FeaturedProducts } from "@/components/FeaturedProducts"
+import { FeaturedProducts } from "@/app/components/FeaturedProducts"
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false);

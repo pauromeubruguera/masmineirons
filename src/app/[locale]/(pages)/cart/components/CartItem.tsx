@@ -24,6 +24,7 @@ export default function CartItem(props: CartItemProps) {
             <div className="px-6">
                 <h5>{product.attributes.productName}</h5>
                 <p>{formatPrice(product.attributes.price)}</p>
+                <p>{product.attributes.quantity}</p>
             </div>
             <div>
                 <button

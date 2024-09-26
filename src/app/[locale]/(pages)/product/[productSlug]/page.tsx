@@ -1,6 +1,6 @@
 "use client"
 
-import { useGetProductBySlug } from "@/api/getProductBySlug"
+import { useGetProductBySlug } from "@/app/api/getProductBySlug"
 import { ResponseType } from "@/types/response"
 import { useParams } from "next/navigation"
 import { ImagesProduct } from "./components/ImagesProduct"

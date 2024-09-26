@@ -9,6 +9,8 @@ export type ProductType = {
         origin: string
         price: number
         minairo: string
+        stock: number
+        quantity: number
         images: {
             data: {
                 id: number

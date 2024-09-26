@@ -16,9 +16,7 @@ export const useCart = create(persist<CartStore>((set, get) => ({
         const existingItem = currentItems.find((item) => item.id === data.id)
 
         if (existingItem) {
-            return (
-                <div>a</div>
-            )
+            // do something
         }
         set({
             items: [...get().items, data]
