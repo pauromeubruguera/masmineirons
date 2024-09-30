@@ -12,7 +12,6 @@ export default function Cart() {
     const totalPrice = prices.reduce((total, price) => total + price, 0)
     const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '')
 
-    console.log(Date.now())
     const buyStripe = async () => {
         try {
             const stripe = await stripePromise
