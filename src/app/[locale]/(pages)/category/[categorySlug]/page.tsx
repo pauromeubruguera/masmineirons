@@ -29,7 +29,7 @@ export default function Category() {
             )}
             <div className="mt-10">
                 <FiltersCategory setFilterOrigin={setFilterOrigin} />
-                <div className="flex gap-5 w-full justify-around py-5">
+                <div className="flex gap-5 w-full justify-around py-5 px-20">
                     {loading && (
                        <p>loading</p>
                     )}

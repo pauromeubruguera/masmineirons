@@ -13,7 +13,7 @@ type ProductCardProps = {
 export const ProductCard = (props: ProductCardProps) => {
     const { product } = props
     return (
-        <Link href={`/product/${product.attributes.slug}`} className="relative basis-1/6">
+        <Link href={`/product/${product.attributes.slug}`} className="relative basis-2/6 p-5">
             <div className="carrousel relative">
                 <Image
                     src={`${product.attributes.images.data[0].attributes.url}`}

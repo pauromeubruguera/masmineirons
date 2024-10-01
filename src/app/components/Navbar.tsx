@@ -29,6 +29,11 @@ export const Navbar = () => {
         router.push(newPath)
     }
 
+    const handleLogout = () => {
+        logout()
+        router.push('/')
+    }
+
     useEffect(() => {
         // Solo se ejecuta en el cliente
         setIsClient(true)
@@ -119,7 +124,7 @@ export const Navbar = () => {
                             </Link>
                             <button
                                 className="py-3 block text-right border-t border-red-300 font-semibold text-red-500 hover:text-white hover:bg-red-500 px-4 text-nowrap"
-                                onClick={() => logout()}
+                                onClick={handleLogout}
                             >
                                 Logout
                             </button>

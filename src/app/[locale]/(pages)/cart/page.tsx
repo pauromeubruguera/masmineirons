@@ -47,7 +47,7 @@ export default function Cart() {
                         <p>Order summary</p>
                         <hr />
                         <div className="flex gap-2">
-                            <p>order total</p>
+                            <p>Order total</p>
                             <p>{formatPrice(totalPrice)}</p>
                         </div>
                         <div>
