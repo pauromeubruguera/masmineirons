@@ -16,7 +16,7 @@ export default function Category() {
     const userId = user ? JSON.parse(user).id : null
     const orderId = result ? Number(result[0].attributes.stripeid.split('-')[0]) : null
 
-    
+
     useEffect(() => {
         if (loading) {
             return;
@@ -33,19 +33,28 @@ export default function Category() {
             )}
 
             {result !== null && !loading && (orderId === userId) && (
-                result[0].attributes.products.map((product: any) => (
-                    <div key={product.id}>
-                        <p>
-                            {product.attributes.productName}
-                        </p>
-                        <p>
-                            {product.attributes.price}
-                        </p>
-                        <p>
-                            {product.attributes.quantity}
-                        </p>
+                <div>
+                    <div className="flex gap-5">
+                        <p>{result[0].attributes.address.name}</p>
+                        <p>{result[0].attributes.address.address}</p>
+                        <p>{result[0].attributes.address.city}</p>
+                        <p>{result[0].attributes.address.country}</p>
+                        <p>{result[0].attributes.address.postalCode}</p>
                     </div>
-                ))
+                    {result[0].attributes.products.map((product: any) => (
+                        <div key={product.id}>
+                            <p>
+                                {product.attributes.productName}
+                            </p>
+                            <p>
+                                {product.attributes.price}
+                            </p>
+                            <p>
+                                {product.attributes.quantity}
+                            </p>
+                        </div>
+                    ))}
+                </div>
             )}
         </div>
     )

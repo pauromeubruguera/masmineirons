@@ -29,10 +29,9 @@ export default function YourOrders() {
                 result.map((order: any) => (
                     <div key={order.id}>
                         <Link href={`yourorders/${order.attributes.stripeid}`} className="relative basis-1/6">
-                            {order.attributes.stripeid}, {order.attributes.createdAt}
+                            {order.attributes.stripeid}, {order.attributes.createdAt}  {order.attributes.address.name}
                         </Link>
                     </div>
-
                 ))
             )}
         </div>
