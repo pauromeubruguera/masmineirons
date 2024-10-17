@@ -1,11 +1,3 @@
-body {
-    margin-top: 68px;
-    background-color: #e5ded4;
-    background-image: url('./background-texture.png');
-    background-repeat: repeat;
-    background-position: center;
-}
-
 nav {
     display: flex;
     align-items: center;

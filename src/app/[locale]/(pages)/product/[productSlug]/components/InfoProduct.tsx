@@ -29,7 +29,7 @@ export const InfoProduct = (props: InfoProductProps) => {
 
         if (value && quantity < product.attributes.stock) {
             setQuantity(quantity + 1)
-        } else if(!value && quantity > 1) {
+        } else if (!value && quantity > 1) {
             setQuantity(quantity - 1)
         }
     }
@@ -40,33 +40,43 @@ export const InfoProduct = (props: InfoProductProps) => {
     }
 
     return (
-        <div>
+        <div className="pl-[20%]">
             <div className="">
                 <h1 className="text-3xl">{product.attributes.productName}</h1>
                 <p className="text-xl my-2">{formatPrice(product.attributes.price)}</p>
             </div>
-            <div className="mt-5">
-                <p>{product.attributes.description}</p>
+            {
+                product.attributes.stock > 0 ?
+                    <>
+                        <div className="my-5">
+                            <p className="my-5">{product.attributes.description}</p>
+                            <div className="my-5">
+                                <button className="px-2 mx-2 w-9 bg-[#787c6e] text-black border border-solid border-[#474940] hover:bg-white transition-colors rounded" onClick={() => changeQuantityButton(false)}>-1</button>
+                                <input
+                                    className="w-10 text-center"
+                                    type="number"
+                                    value={quantity}
+                                    min="1"
+                                    max={product.attributes.stock}
+                                    onChange={changeQuantity}
+                                />
+                                <button className="px-2 mx-2 w-9 bg-[#787c6e] text-black border border-solid border-[#474940] hover:bg-white transition-colors rounded" onClick={() => changeQuantityButton(true)}>+1</button>
+                            </div>
+                        </div>
+                        <div className="flex gap-3 items-center my-10">
+                            <button className="p-2 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" onClick={sendAddItems}>Comprar</button>
+                            {isAuthenticated &&
+                                <Heart strokeWidth="1" className="cursor-pointer" onClick={() => console.log("add to favorite")} />
+                            }
+                        </div>
+                    </>
+                    :
+                    <div>
+                        <p className="my-5">{product.attributes.description}</p>
+                        <p className="mt-10 text-red-700">*Producte sense stock</p>
+                    </div>
+            }
 
-                <div>
-                    <button onClick={() => changeQuantityButton(false)}>-1</button>
-                    <input
-                        type="number"
-                        value={quantity}
-                        min="1"
-                        max={product.attributes.stock}
-                        onChange={changeQuantity}
-                    />
-                    <button onClick={() => changeQuantityButton(true)}>+1</button>
-                </div>
-            </div>
-            <div className="flex gap-3 items-center mt-10">
-
-                <button className="p-2 bg-green-800" onClick={sendAddItems}>Comprar</button>
-                {isAuthenticated &&
-                    <Heart strokeWidth="1" className="cursor-pointer" onClick={() => console.log("add to favorite")} />
-                }
-            </div>
         </div>
     )
 }

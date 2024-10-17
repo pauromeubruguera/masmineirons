@@ -20,7 +20,7 @@ export default function Category() {
             : result.filter((product: ProductType) =>
                 product.attributes.origin === filterOrigin)
     )
-    
+
 
     return (
         <div className="p-10">
@@ -31,7 +31,9 @@ export default function Category() {
                 <FiltersCategory setFilterOrigin={setFilterOrigin} />
                 <div className="flex gap-5 w-full justify-around py-5 px-20">
                     {loading && (
-                       <p>loading</p>
+                        <div className="flex gap-5 justify-evenly mt-[-68px] min-h-screen items-center px-[8%]">
+                            <p>loading</p>
+                        </div>
                     )}
                     {filteredProducts !== null && !loading && (
                         filteredProducts.map((product: ProductType) => (
@@ -39,7 +41,10 @@ export default function Category() {
                         ))
                     )}
                     {filteredProducts !== null && !loading && filteredProducts.length === 0 && (
-                        <p>No hay este tipo de productos</p>
+
+                        <div className="flex gap-5 justify-evenly mt-[-68px] min-h-screen items-center px-[8%]">
+                            <p>No hay este tipo de productos</p>
+                        </div>
                     )}
                 </div>
             </div>

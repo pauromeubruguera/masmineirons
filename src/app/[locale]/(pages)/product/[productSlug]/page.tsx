@@ -17,14 +17,16 @@ export default function Product() {
     return (
         <div className="">
             {result === null && loading && (
-                <p>loading</p>
+                <div className="flex gap-5 justify-evenly mt-[-68px] min-h-screen items-center px-[8%]">
+                    <p>loading</p>
+                </div>
             )}
             {result !== null && !loading && (
-                <div className="flex gap-5 justify-evenly mt-[-68px] min-h-screen items-center">
+                <div className="flex gap-5 justify-evenly mt-[-68px] min-h-screen items-center px-[8%]">
                     <div className="w-3/12">
                         <ImagesProduct images={result[0].attributes.images} />
                     </div>
-                    <div className="w-5/12">
+                    <div className="w-9/12">
                         <InfoProduct product={result[0]} />
                     </div>
                 </div>

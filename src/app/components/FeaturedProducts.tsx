@@ -6,9 +6,11 @@ import Image from "next/image"
 export const FeaturedProducts = () => {
     const { loading, result, error }: ResponseType = useGetFeaturedProducts()
     return (
-        <>
-            <h2 className="pt-[0%] pr-[0%] pl-[11%]">Productes</h2>
-            <section className="pt-10 px-[15%] gap-20">
+
+        <section className="pt-10 px-[15%] relative">
+            <div className="backgroundImage"></div>
+            <h2 className="pb-[5%] pr-[0%] pl-[0%]">Productes</h2>
+            <div className="flex justify-evenly gap-52">
                 {loading && (
                     "loading"
                 )}
@@ -29,7 +31,8 @@ export const FeaturedProducts = () => {
                         )
                     })
                 )}
-            </section>
-        </>
+            </div>
+        </section>
+
     )
 }

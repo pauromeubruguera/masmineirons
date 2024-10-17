@@ -48,12 +48,12 @@ export default function Cart() {
     }
 
     return (
-        <div className="p-10">
+        <div className="mt-[68px] px-[10%]">
             {!formActive ?
-                <div>
-                    <h1>Shopping Cart</h1>
+                <div className="py-10">
+                    <h2>Shopping Cart</h2>
                     <div className="flex gap-5">
-                        <div>
+                        <div className="w-3/6">
                             {items.length === 0 && (
                                 <p>no hay productos</p>
                             )}
@@ -63,16 +63,16 @@ export default function Cart() {
                                 ))}
                             </ul>
                         </div>
-                        <div>
+                        <div className="w-3/6">
                             <div>
-                                <p>Order summary</p>
+                                <p className="text-lg my-5"><strong>Order summary</strong></p>
                                 <hr />
                                 <div className="flex gap-2">
                                     <p>Order total</p>
                                     <p>{formatPrice(totalPrice)}</p>
                                 </div>
                                 <div>
-                                    <button onClick={()=> {setFormActive(true)}}>Comprar</button>
+                                    <button className="p-2 mt-5 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" onClick={()=> {setFormActive(true)}}>Comprar</button>
                                 </div>
                             </div>
                         </div>

@@ -1,15 +1,15 @@
 "use client"
 import { useCart } from '@/hooks/use-cart'
 import { ShoppingCart, Heart, User, Globe, ChevronDown } from 'lucide-react'
-import { Link } from '@/i18n/routing';
+import { Link } from '@/i18n/routing'
 import { useState, useEffect, useTransition } from 'react'
 import { LoginModal } from './LoginModal'
 import { useAuthStore } from '@/hooks/auth-store'
-import { useLocale, useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
-import { useGetCategories } from '@/app/api/useGetCategories';
+import { useLocale, useTranslations } from 'next-intl'
+import { useRouter } from 'next/navigation'
+import { useGetCategories } from '@/app/api/useGetCategories'
 import { ResponseType } from "@/types/response"
-import { CategoryType } from '@/types/category';
+import { CategoryType } from '@/types/category'
 import "@/styles/navbar.css"
 
 
@@ -70,11 +70,30 @@ export const Navbar = () => {
                     )}
                 </div>
             </div>
+            <div className="group relative cursor-pointer flex items-center h-[100%]">
+                <div className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
+                    <div className='navLink'>Nosaltres</div>
+                </div>
+                <div className="invisible text-right absolute left-0 top-[68px] z-50 flex w-min min-w-[100%] flex-col bg-gray-100 py-0 px-0 opacity-0 group-hover:opacity-100 text-gray-800 shadow-xl group-hover:visible transition-opacity">
+                    <Link
+                        href='/history'
+                        className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
+                        History
+                    </Link>
+                    <Link
+                        href='/history'
+                        className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
+                        Qui Som
+                    </Link>
+                    <Link
+                        href='/history'
+                        className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
+                        Fototeca
+                    </Link>
+                </div>
+            </div>
             <button className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>blog</span>
-            </button>
-            <button className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
-                <span className='navLink'>Nosaltres</span>
             </button>
             <button className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>contacte</span>

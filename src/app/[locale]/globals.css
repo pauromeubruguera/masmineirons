@@ -108,67 +108,136 @@
   }
   body {
     @apply bg-background text-foreground;
+    margin-top: 68px;
+    background-color: #e5ded4;
+    background-image: url('/images/background-texture.png');
+    background-repeat: repeat;
+    background-position: center;
   }
   main {
     min-height: calc(100vh - 200px);
   }
   h1,
-h2,
-h4,
-h6 {
-  font-family: "theseasons_bold";
-  text-transform: uppercase;
-}
-h2 {
-  font-size: 1.9vw;
-}
-h3 {
-  margin: 8% 0 4%;
-  font-family: "rollerscript_rough";
-  font-size: 40px;
-}
-h4 {
-  font-size: 1.3vw;
-  line-height: 1.3vw;
-}
-h5 {
-  font-family: "sofiapro-light";
-  font-size: 1.3vw;
-  margin-top: 32px;
-  text-transform: uppercase;
-}
-h6 {
-  font-size: 0.95vw;
-  line-height: 1.7vw;
-}
-h1,
-h2,
-h4,
-h6 {
-  font-family: "theseasons_bold";
-  text-transform: uppercase;
-}
-h2 {
-  font-size: 1.9vw;
-}
-h3 {
-  margin: 8% 0 4%;
-  font-family: "rollerscript_rough";
-  font-size: 40px;
-}
-h4 {
-  font-size: 1.3vw;
-  line-height: 1.3vw;
-}
-h5 {
-  font-family: "sofiapro-light";
-  font-size: 1.3vw;
-  margin-top: 32px;
-  text-transform: uppercase;
-}
-h6 {
-  font-size: 0.95vw;
-  line-height: 1.7vw;
-}
+  h2,
+  h4,
+  h6 {
+    font-family: "theseasons_bold";
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 1.9vw;
+  }
+  h3 {
+    margin: 8% 0 4%;
+    font-family: "rollerscript_rough";
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+  }
+  h5 {
+    font-family: "sofiapro-light";
+    font-size: 1.3vw;
+    margin-top: 32px;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-size: 0.95vw;
+    line-height: 1.7vw;
+  }
+  h1,
+  h2,
+  h4,
+  h6 {
+    font-family: "theseasons_bold";
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 1.9vw;
+  }
+  h3 {
+    margin: 8% 0 4%;
+    font-family: "rollerscript_rough";
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 1.6vw;
+    line-height: 1.8vw;
+  }
+  h5 {
+    font-family: "sofiapro-light";
+    font-size: 1.3vw;
+    margin-top: 32px;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-size: 1.2vw;
+    line-height: 1.7vw;
+  }
+  p {
+    font-size: 20px;
+    font-size: 1.1vw;
+    line-height: 26px;
+    line-height: 1.35vw;
+    letter-spacing: 0.7px;
+    text-align: justify;
+    font-family: "sofiapro-light";
+    strong {
+      font-family: "sofiapro-bold";
+    }
+  }
 
+  .mainPage {
+    .backgroundImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0.2;
+      top: 0;
+      left: 0;
+      background-image: url("/images/olivera_part_tronc_1.png");
+      background-position: center;
+      background-size: cover;
+    }
+    p {
+      margin-bottom: 1.3vw;
+    }
+    form {
+      label,
+      input {
+        margin-bottom: 1.3vw;
+        font-size: 1.1vw;
+        line-height: 1.35vw;
+        letter-spacing: 0.7px;
+        font-family: "sofiapro-light";
+        strong {
+          font-family: "sofiapro-bold";
+        }
+      }
+      button {
+        font-family: "sofiapro-bold";
+        text-transform: uppercase;
+      }
+    }
+    ul {
+      margin-bottom: 1.3vw;
+      li {
+        font-size: 1.1vw;
+        line-height: 1.35vw;
+        letter-spacing: 0.7px;
+        text-align: justify;
+        font-family: "sofiapro-light";
+        strong {
+          font-family: "sofiapro-bold";
+        }
+      }
+    }
+    .minairo {
+      position: absolute;
+    }
+    section {
+      padding-bottom: 5%;
+    }
+  }
 }

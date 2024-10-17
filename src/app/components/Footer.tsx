@@ -1,5 +1,7 @@
 "use client"
 
+import { Link } from '@/i18n/routing'
+
 export const Footer = () => {
     return (
         <footer className="flex justify-evenly pb-16">
@@ -14,6 +16,7 @@ export const Footer = () => {
             <div>
                 <p className="text-sm"><strong>Necessites ajuda?</strong></p>
                 <ul className="ml-5">
+                    <li className="text-xs"><Link className='hover:underline' href='/legal'>Avis Legal</Link></li>
                     <li className="text-xs">Contacta</li>
                 </ul>
             </div>

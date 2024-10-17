@@ -25,8 +25,14 @@ export const ProductCard = (props: ProductCardProps) => {
             </div>
             <div>
                 <h5 className="text-xl">{product.attributes.productName}</h5>
-                <p className="text-xs">{product.attributes.description}</p>
+                <p className="text-xs">{product.attributes.origin}</p>
+                <p className="text-xs">{product.attributes.shortDescription}</p>
                 <p className="text-sm">{formatPrice(product.attributes.price)}</p>
+
+                {
+                    product.attributes.stock <= 0 &&
+                    <p className="mt-1 text-red-700">*Producte sense stock</p>
+                }
             </div>
         </Link>
     )

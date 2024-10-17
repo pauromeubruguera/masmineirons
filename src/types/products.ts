@@ -4,6 +4,7 @@ export type ProductType = {
         productName: string
         slug: string
         description: string
+        shortDescription: string
         active: boolean
         isFeatured: boolean
         origin: string
