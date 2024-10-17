@@ -10,7 +10,7 @@ export const FeaturedProducts = () => {
         <section className="pt-10 px-[15%] relative">
             <div className="backgroundImage"></div>
             <h2 className="pb-[5%] pr-[0%] pl-[0%]">Productes</h2>
-            <div className="flex justify-evenly gap-52">
+            <div className="flex justify-evenly gap-52 relative">
                 {loading && (
                     "loading"
                 )}

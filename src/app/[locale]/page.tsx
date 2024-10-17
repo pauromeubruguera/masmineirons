@@ -29,21 +29,6 @@ export default function Home() {
 
                 </section>
                 <section>
-                    <div className="relative">
-                        <Image
-                            width={4961}
-                            height={2622}
-                            className=""
-                            src="/images/imatge_promo_1.png"
-                            alt="" />
-                            <div className="p-5 absolute top-[50%] left-0 w-full bg-white bg-opacity-50 
-                            translate-y-[-50%] text-center">
-                                <h1 className="text-center text-8xl">Comming Soon</h1>
-                                <h6 className="">stay tunned</h6>
-                            </div>
-                    </div>
-                </section>
-                <section>
                     <div className="pt-[0%] pr-[8%] pl-[8%]">
                         <p>
                             Una nit d’estiu de l’any 1917, mentre voltava pel camp, en Pau Molina va trobar cent
