@@ -67,12 +67,16 @@ export default function Cart() {
                             <div>
                                 <p className="text-lg my-5"><strong>Order summary</strong></p>
                                 <hr />
-                                <div className="flex gap-2">
-                                    <p>Order total</p>
+                                {items.map((item) => (
+                                    <p key={item.id}>{item.attributes.productName}: {formatPrice(item.attributes.price * item.attributes.quantity)}</p>
+                                ))}
+                                <hr />
+                                <div className="flex gap-2 mt-5">
+                                    <p><strong>Order total</strong></p>
                                     <p>{formatPrice(totalPrice)}</p>
                                 </div>
                                 <div>
-                                    <button className="p-2 mt-5 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" onClick={()=> {setFormActive(true)}}>Comprar</button>
+                                    <button className="p-2 mt-5 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" onClick={() => { setFormActive(true) }}>Comprar</button>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +86,7 @@ export default function Cart() {
                 :
                 <div>
                     <h2>Send Product</h2>
-                    <button onClick={()=> {setFormActive(false)}}>Back to cart</button>
+                    <button onClick={() => { setFormActive(false) }}>Back to cart</button>
                     <form onSubmit={buyStripe}>
                         <div>
                             <label htmlFor="address">Name:</label>

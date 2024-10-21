@@ -165,7 +165,7 @@ export const LoginModal = (props: LoginModalProps) => {
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
 
-                                <button type="submit">Submit</button>
+                                <button className="p-2 mt-5 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" type="submit">Submit</button>
                                 <div>{message}</div>
                             </form>
                         }

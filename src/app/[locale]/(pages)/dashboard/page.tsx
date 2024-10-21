@@ -51,11 +51,11 @@ export default function Dashboard() {
         <div className="p-10">
             <h2>Dashboard</h2>
             <div className="change-password-form">
-                <h5>Cambiar Contraseña</h5>
+                <h5 className="pb-5">Cambiar Contraseña</h5>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
                 {success && <p style={{ color: 'green' }}>{success}</p>}
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="p-1">
                         <label>Contraseña Actual: </label>
                         <input
                             type="password"
@@ -64,7 +64,7 @@ export default function Dashboard() {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="p-1">
                         <label>Nueva Contraseña: </label>
                         <input
                             type="password"
@@ -73,7 +73,7 @@ export default function Dashboard() {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="p-1">
                         <label>Confirmar Nueva Contraseña: </label>
                         <input
                             type="password"
@@ -82,7 +82,7 @@ export default function Dashboard() {
                             required
                         />
                     </div>
-                    <button type="submit">Cambiar Contraseña</button>
+                    <button className="p-2 mt-5 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" type="submit">Cambiar Contraseña</button>
                 </form>
             </div>
         </div>

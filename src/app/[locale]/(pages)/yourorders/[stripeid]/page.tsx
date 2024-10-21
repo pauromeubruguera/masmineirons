@@ -1,6 +1,7 @@
 "use client"
 import { useGetOrderById } from "@/app/api/getOrderById"
 import { useAuthStore } from "@/hooks/auth-store"
+import { formatPrice } from "@/lib/formatPrice"
 import { ResponseType } from "@/types/response"
 import { useParams, useRouter } from "next/navigation"
 import { useEffect } from "react"
@@ -42,15 +43,17 @@ export default function Category() {
                         <p>{result[0].attributes.address.postalCode}</p>
                     </div>
                     {result[0].attributes.products.map((product: any) => (
-                        <div key={product.id}>
-                            <p>
-                                {product.attributes.productName}
-                            </p>
-                            <p>
-                                {product.attributes.price}
-                            </p>
-                            <p>
-                                {product.attributes.quantity}
+                        <div className="my-5" key={product.id}>
+                            <p className="flex justify-between border border-b-black p-1">
+                                <span>
+                                    {product.attributes.productName}
+                                </span>
+                                <span>
+                                    {product.attributes.quantity} uds
+                                </span>
+                                <span>
+                                    {formatPrice(product.attributes.price)}
+                                </span>
                             </p>
                         </div>
                     ))}
