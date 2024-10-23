@@ -2,7 +2,7 @@
 import { useCart } from '@/hooks/use-cart'
 import { ShoppingCart, Heart, User, Globe, ChevronDown } from 'lucide-react'
 import { Link } from '@/i18n/routing'
-import { useState, useEffect, useTransition } from 'react'
+import { useState, useEffect } from 'react'
 import { LoginModal } from './LoginModal'
 import { useAuthStore } from '@/hooks/auth-store'
 import { useLocale, useTranslations } from 'next-intl'
@@ -33,6 +33,11 @@ export const Navbar = () => {
         logout()
         router.push('/')
     }
+
+    const handleScrollToSection = () => {
+        // Navegamos a la nueva página y pasamos el ID de la sección
+        router.push('/#contact');
+      };
 
     useEffect(() => {
         // Solo se ejecuta en el cliente
@@ -95,7 +100,8 @@ export const Navbar = () => {
             <button className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>blog</span>
             </button>
-            <button className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
+            <button onClick={handleScrollToSection}
+             className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>contacte</span>
             </button>
             <div className='flex gap-5 items-center h-[100%] '>
@@ -111,11 +117,11 @@ export const Navbar = () => {
                         }
                     </Link>
                 </div>
-                <div>
+              {/*   <div>
                     <Link href="/favorites">
                         <Heart strokeWidth="1" className="cursor-pointer" />
                     </Link>
-                </div>
+                </div> */}
                 {isAuthenticated ?
                     <div className="group relative cursor-pointer flex items-center h-[100%]">
                         <div className="flex items-center justify-between">

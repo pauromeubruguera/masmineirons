@@ -65,9 +65,9 @@ export const InfoProduct = (props: InfoProductProps) => {
                         </div>
                         <div className="flex gap-3 items-center my-10">
                             <button className="p-2 bg-[#787c6e] text-black hover:text-white hover:bg-[#474940] transition-colors" onClick={sendAddItems}>Comprar</button>
-                            {isAuthenticated &&
+                           {/*  {isAuthenticated &&
                                 <Heart strokeWidth="1" className="cursor-pointer" onClick={() => console.log("add to favorite")} />
-                            }
+                            } */}
                         </div>
                     </>
                     :

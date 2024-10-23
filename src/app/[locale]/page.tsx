@@ -1,15 +1,26 @@
 "use client"
 import Image from "next/image"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 import { FeaturedProducts } from "@/app/components/FeaturedProducts"
+import { usePathname  } from 'next/navigation'
 
 export default function Home() {
-    const [isClient, setIsClient] = useState(false);
+    const [isClient, setIsClient] = useState(false)
+    const aboutSectionRef = useRef(null)
+    const pathname = usePathname()
 
     useEffect(() => {
         setIsClient(true);
-    }, []);
+    }, [])
+
+       useEffect(() => {
+        if (typeof window !== 'undefined' && pathname) {
+            // Si la URL tiene un hash (#), hacemos scroll a la sección
+            if (pathname.includes('#contact') &&  aboutSectionRef.current) {
+                (aboutSectionRef.current as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });            }
+          }
+    }, [pathname])
 
     return (
         <>
@@ -395,7 +406,7 @@ export default function Home() {
                             src="/images/panoramica.jpg" alt="" />
                     </div>
                 </section>
-                <section>
+                <section ref={aboutSectionRef} id="contact">
                     <div className="flex justify-evenly">
                         <div className="w-4/12 pt-[8%] pr-[0%] pl-[12%]">
                             <h2>Contacte</h2>
