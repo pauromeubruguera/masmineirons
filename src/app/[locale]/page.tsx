@@ -3,23 +3,33 @@ import Image from "next/image"
 import React, { useEffect, useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 import { FeaturedProducts } from "@/app/components/FeaturedProducts"
-import { usePathname  } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import { Contact } from "../components/Contact"
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false)
-    const aboutSectionRef = useRef(null)
+    const aboutSectionRef1 = useRef(null)
+    const aboutSectionRef2 = useRef(null)
+    const aboutSectionRef3 = useRef(null)
     const pathname = usePathname()
 
     useEffect(() => {
         setIsClient(true);
     }, [])
 
-       useEffect(() => {
+    useEffect(() => {
         if (typeof window !== 'undefined' && pathname) {
             // Si la URL tiene un hash (#), hacemos scroll a la sección
-            if (pathname.includes('#contact') &&  aboutSectionRef.current) {
-                (aboutSectionRef.current as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });            }
-          }
+            if (pathname.includes('#history') && aboutSectionRef1.current) {
+                (aboutSectionRef1.current as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            if (pathname.includes('#weare') && aboutSectionRef2.current) {
+                (aboutSectionRef2.current as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            if (pathname.includes('#contact') && aboutSectionRef3.current) {
+                (aboutSectionRef3.current as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
     }, [pathname])
 
     return (
@@ -39,7 +49,7 @@ export default function Home() {
                     )}
 
                 </section>
-                <section>
+                <section ref={aboutSectionRef1} id="history">
                     <div className="pt-[0%] pr-[8%] pl-[8%]">
                         <p>
                             Una nit d’estiu de l’any 1917, mentre voltava pel camp, en Pau Molina va trobar cent
@@ -279,7 +289,7 @@ export default function Home() {
                         />
                     )}
                 </section>
-                <section>
+                <section ref={aboutSectionRef2} id="weare">
                     <div className="flex justify-evenly">
                         <div className="w-5/12">
                             <Image
@@ -406,37 +416,8 @@ export default function Home() {
                             src="/images/panoramica.jpg" alt="" />
                     </div>
                 </section>
-                <section ref={aboutSectionRef} id="contact">
-                    <div className="flex justify-evenly">
-                        <div className="w-4/12 pt-[8%] pr-[0%] pl-[12%]">
-                            <h2>Contacte</h2>
-                            <form className="mt-10" action="">
-                                <p>
-                                    Per telefon:
-                                </p>
-                                <div className="flex gap-2 w-fit items-center">
-                                    <label>Mail:</label>
-                                    <input className="border border-solid border-[black]" />
-                                </div>
-                                <p>
-                                    Subscriute per rebre actualitzacions sobre els
-                                    productes i promocions!
-                                </p>
-                                <button
-                                    className="mt-10 m-auto text-center block p-2 border border-solid border-[black]">
-                                    Subscriure&apos;m
-                                </button>
-                            </form>
-                        </div>
-                        <div className="w-8/12">
-                            <Image
-                                width={4961}
-                                height={3508}
-                                className="pt-[0%] pr-[9%] pl-[4%]"
-                                src="/images/Olivera.png"
-                                alt="" />
-                        </div>
-                    </div>
+                <section ref={aboutSectionRef3} id="contact">
+                    <Contact />
                 </section>
                 <section className="py-36">
                     <div className="flex justify-evenly">

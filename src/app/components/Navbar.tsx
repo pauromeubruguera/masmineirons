@@ -34,10 +34,10 @@ export const Navbar = () => {
         router.push('/')
     }
 
-    const handleScrollToSection = () => {
+    const handleScrollToSection = (link: string) => {
         // Navegamos a la nueva página y pasamos el ID de la sección
-        router.push('/#contact');
-      };
+        router.push(link);
+    };
 
     useEffect(() => {
         // Solo se ejecuta en el cliente
@@ -80,28 +80,25 @@ export const Navbar = () => {
                     <div className='navLink'>Nosaltres</div>
                 </div>
                 <div className="invisible text-right absolute left-0 top-[68px] z-50 flex w-min min-w-[100%] flex-col bg-gray-100 py-0 px-0 opacity-0 group-hover:opacity-100 text-gray-800 shadow-xl group-hover:visible transition-opacity">
-                    <Link
-                        href='/history'
-                        className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
-                        History
-                    </Link>
-                    <Link
-                        href='/history'
-                        className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
-                        Qui Som
-                    </Link>
-                    <Link
-                        href='/history'
-                        className="py-3 block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
-                        Fototeca
-                    </Link>
+                    <button onClick={() => handleScrollToSection("/#history")}
+                        className="py-3 text-right block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
+                        <span>Hisotria</span>
+                    </button>
+                    <button onClick={() => handleScrollToSection("/#weare")}
+                        className="py-3 text-right block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
+                        <span>Qui Som</span>
+                    </button>
+                    <button onClick={() => handleScrollToSection("/#photo")}
+                        className="py-3 text-right block border-b border-gray-100 font-semibold text-gray-500 hover:text-black hover:bg-[#bebab3] px-4 text-nowrap">
+                        <span>Fototeca</span>
+                    </button>
                 </div>
             </div>
             <button className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>blog</span>
             </button>
-            <button onClick={handleScrollToSection}
-             className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
+            <button onClick={() => handleScrollToSection("/#contact")}
+                className='flex items-center h-[100%] text-black hover:text-white hover:bg-[#474940] px-2 transition-colors'>
                 <span className='navLink'>contacte</span>
             </button>
             <div className='flex gap-5 items-center h-[100%] '>
@@ -117,7 +114,7 @@ export const Navbar = () => {
                         }
                     </Link>
                 </div>
-              {/*   <div>
+                {/*   <div>
                     <Link href="/favorites">
                         <Heart strokeWidth="1" className="cursor-pointer" />
                     </Link>

@@ -240,7 +240,10 @@
       position: absolute;
     }
     section {
-      padding-bottom: 5%;
+      padding: 5% 0 5%;
+      &:first-child {
+        padding-top: 0;
+      }
     }
   }
 }
